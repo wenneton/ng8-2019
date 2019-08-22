@@ -4,12 +4,13 @@
                 <img src="assets/img/marca-login.svg" alt="Logo">
                 <h1>Seja bem-vindo</h1>
             </header>
+            <div class="messages" *ngIf="message">{{message}}</div>
             <div class="form-container">
                 <form (ngSubmit)="send()">
                     <div class="form-group">
-                        <label for="username"></label>
+                        <label for="email"></label>
                         <!-- <span class="custom-icon user"></span> -->
-                        <input type="text" placeholder="Usuário" class="icon-user" [(ngModel)]="data.username" name="username">
+                        <input type="email" placeholder="Usuário" class="icon-user" [(ngModel)]="data.email" name="email">
                     </div>
                     <div class="form-group">
                         <label for=""></label>
@@ -18,7 +19,7 @@
                     </div>
                     <button type="submit" 
                     [disabled]="!isValid()" 
-                    [ngClass]="{'disabled': !isValid()}">Entrar</button>
+                    [ngClass]="{'disabled': !isValid()}">{{action}}</button>
                 </form>
             </div>
         </main>
