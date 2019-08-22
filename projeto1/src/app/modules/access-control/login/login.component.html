@@ -5,18 +5,20 @@
                 <h1>Seja bem-vindo</h1>
             </header>
             <div class="form-container">
-                <form action="">
+                <form (ngSubmit)="send()">
                     <div class="form-group">
-                        <label for=""></label>
+                        <label for="username"></label>
                         <!-- <span class="custom-icon user"></span> -->
-                        <input type="text" placeholder="Usuário" class="icon-user">
+                        <input type="text" placeholder="Usuário" class="icon-user" [(ngModel)]="data.username" name="username">
                     </div>
                     <div class="form-group">
                         <label for=""></label>
                         <!-- <span class="custom-icon password"></span> -->
-                        <input type="password" placeholder="Senha" class="icon-password">
+                        <input type="password" placeholder="Senha" class="icon-password" [(ngModel)]="data.password" name="password">
                     </div>
-                    <button (click)="send()">Entrar</button>
+                    <button type="submit" 
+                    [disabled]="!isValid()" 
+                    [ngClass]="{'disabled': !isValid()}">Entrar</button>
                 </form>
             </div>
         </main>
