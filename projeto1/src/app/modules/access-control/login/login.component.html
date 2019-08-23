@@ -20,6 +20,9 @@
                     <button type="submit" 
                     [disabled]="!isValid()" 
                     [ngClass]="{'disabled': !isValid()}">{{action}}</button>
+                    <div class="pt-2 text-center">
+                        <a class="text-info" routerLink="/register"  >Quero me cadastrar</a>
+                    </div>
                 </form>
             </div>
         </main>

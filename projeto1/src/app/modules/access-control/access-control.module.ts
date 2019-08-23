@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [LoginComponent, HomeComponent],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ]
 })
 export class AccessControlModule { }

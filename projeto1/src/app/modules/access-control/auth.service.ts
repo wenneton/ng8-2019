@@ -13,4 +13,8 @@ export class AuthService {
   public login(data: LoginModel) {
     return this.http.post(`https://reqres.in/api/login`, data);
   }
+
+  public register(data: LoginModel) {
+    return this.http.post(`https://reqres.in/api/register`, data);
+  }
 }
