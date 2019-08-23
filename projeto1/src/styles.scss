@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'scss/theme';
+
 *,
 *:after,
 *:before {
@@ -12,5 +14,3 @@ body {
     width: 100vw;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
-// @import "../node_modules/bootstrap/scss/bootstrap";
