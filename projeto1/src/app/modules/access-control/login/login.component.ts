@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       const response: any = await this.loginService.login(this.data).toPromise();
       this.message = '';
       localStorage.setItem('USER_TOKEN', response.token);
-      this.router.navigate(['home']);
+      this.router.navigate(['main']);
     } catch (error) {
       this.message = 'Ocorreu um erro. Tente novamente.';
     } finally {
