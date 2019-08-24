@@ -2,6 +2,7 @@ import { LoginModel } from './../login.model';
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: AuthService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit() {
@@ -36,7 +38,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('USER_TOKEN', response.token);
       this.router.navigate(['main']);
     } catch (error) {
-      this.message = 'Ocorreu um erro. Tente novamente.';
+      this.toastr.error('Tente novamente.', 'Ocorreu um erro.');
     } finally {
       this.action = this.DEFAULT_ACTION;
     }
