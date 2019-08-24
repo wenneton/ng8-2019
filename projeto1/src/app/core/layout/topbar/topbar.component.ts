@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/modules/access-control/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-topbar',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private toastr: ToastrService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['login']);
+    this.toastr.success('Logout efetuado com sucesso!');
   }
 
 }

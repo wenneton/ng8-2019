@@ -40,6 +40,9 @@
   
       .notifications, .options {
           cursor: pointer;
+          button: {
+            visibility: hidden !important;
+          }
       }
     }
   }
