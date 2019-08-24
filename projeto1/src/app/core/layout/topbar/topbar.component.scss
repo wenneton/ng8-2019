@@ -40,6 +40,13 @@
   
       .notifications, .options {
           cursor: pointer;
+          button {
+              margin: 0px;
+              padding: 0px;
+              background-color: transparent;
+              border: none;
+              color: white;
+          }
       }
     }
   }
