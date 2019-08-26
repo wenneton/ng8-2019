@@ -20,6 +20,9 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
     ToastrModule.forRoot(ngxToastrConstants),
     LoadingBarHttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(ngxToastrConstants),
+    LoadingBarHttpClientModule,
     AccessControlModule,
     MainModule
   ],

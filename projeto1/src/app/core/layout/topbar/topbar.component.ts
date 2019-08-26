@@ -1,3 +1,5 @@
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from './../../../modules/access-control/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/modules/access-control/auth.service';
@@ -22,6 +24,12 @@ export class TopbarComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['login']);
     this.toastr.success('Logout efetuado com sucesso!');
+  }
+
+  public logout() {
+    this.service.logout();
+    this.toastr.info('Você saiu do sistema');
+    this.router.navigate(['login']);
   }
 
 }

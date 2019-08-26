@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('USER_TOKEN', response.token);
       this.router.navigate(['main']);
     } catch (error) {
-      this.toastr.error("Tente novamente", "Ocorreu um erro");
+      this.toastr.error('Tente novamente.', 'Ocorreu um erro.');
     } finally {
       this.action = this.DEFAULT_ACTION;
     }

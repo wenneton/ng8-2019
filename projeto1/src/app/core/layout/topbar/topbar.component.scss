@@ -40,8 +40,12 @@
   
       .notifications, .options {
           cursor: pointer;
-          button: {
-            visibility: hidden !important;
+          button {
+              margin: 0px;
+              padding: 0px;
+              background-color: transparent;
+              border: none;
+              color: white;
           }
       }
     }
